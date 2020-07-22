@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title color="secondary">
+      Message Posts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card
+    color="secondary"
+    style="
+      text-align: center;
+      display: flex;
+      flex-direction: center;
+      justify-content: center;
+    "
+  >
+    <ion-card-header>
+      <ion-card-title color="secondary"> Create Message</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content color="secondary" class="ion-no-padding">
+      <ion-label color="primary" position="stacked"> Your Message: </ion-label>
+      <ion-input
+        [(ngModel)]="model.text"
+        name="text"
+        position="stacked"
+        style="border: 1px solid white; border-radius: 5px; width: 50%;"
+        type="text"
+      ></ion-input>
+
+      <br />
+
+      <ion-label color="primary" position="stacked"> IMG: </ion-label>
+      <ion-input
+        [(ngModel)]="model.imageUrl"
+        name="image"
+        position="stacked"
+        style="border: 1px solid white; border-radius: 5px; width: 50%;"
+        type="text"
+      ></ion-input>
+
+      <br />
+
+      <ion-button (click)="savePost()">
+        POST <ion-icon name="albums-outline"></ion-icon
+      ></ion-button>
+
+      <br />
+
+      <div style="text-align: center; padding: 15px;">
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit
+        clean.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>Sent Messages</ion-label>
+      <ion-button fill="outline" slot="end"
+        >View <ion-icon name="bar-chart-outline"></ion-icon
+      ></ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags, within an
+      ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
